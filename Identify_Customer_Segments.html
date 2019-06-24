@@ -1,13 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head><meta charset="utf-8" />
-
 <title>Identify_Customer_Segments</title>
 
 <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"></script>
-
-
 
 <style type="text/css">
     /*!
@@ -16,8 +13,8 @@
 *
 */
 /*!
- * Bootstrap v3.3.7 (http://getbootstrap.com)
- * Copyright 2011-2016 Twitter, Inc.
+ * Bootstrap v3.3.6 (http://getbootstrap.com)
+ * Copyright 2011-2015 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 /*! normalize.css v3.0.3 | MIT License | github.com/necolas/normalize.css */
@@ -204,6 +201,7 @@ th {
   *:before,
   *:after {
     background: transparent !important;
+    color: #000 !important;
     box-shadow: none !important;
     text-shadow: none !important;
   }
@@ -1111,6 +1109,7 @@ a:focus {
   text-decoration: underline;
 }
 a:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -2539,6 +2538,7 @@ select[size] {
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -3029,6 +3029,7 @@ select[multiple].input-lg {
 .btn.focus,
 .btn:active.focus,
 .btn.active.focus {
+  outline: thin dotted;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
 }
@@ -6748,15 +6749,15 @@ button.close {
 *
 */
 /*!
- *  Font Awesome 4.7.0 by @davegandy - http://fontawesome.io - @fontawesome
+ *  Font Awesome 4.2.0 by @davegandy - http://fontawesome.io - @fontawesome
  *  License - http://fontawesome.io/license (Font: SIL OFL 1.1, CSS: MIT License)
  */
 /* FONT PATH
  * -------------------------- */
 @font-face {
   font-family: 'FontAwesome';
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.7.0');
-  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.7.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff2?v=4.7.0') format('woff2'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.7.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.7.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.7.0#fontawesomeregular') format('svg');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?v=4.2.0');
+  src: url('../components/font-awesome/fonts/fontawesome-webfont.eot?#iefix&v=4.2.0') format('embedded-opentype'), url('../components/font-awesome/fonts/fontawesome-webfont.woff?v=4.2.0') format('woff'), url('../components/font-awesome/fonts/fontawesome-webfont.ttf?v=4.2.0') format('truetype'), url('../components/font-awesome/fonts/fontawesome-webfont.svg?v=4.2.0#fontawesomeregular') format('svg');
   font-weight: normal;
   font-style: normal;
 }
@@ -6813,19 +6814,6 @@ button.close {
   border: solid 0.08em #eee;
   border-radius: .1em;
 }
-.fa-pull-left {
-  float: left;
-}
-.fa-pull-right {
-  float: right;
-}
-.fa.fa-pull-left {
-  margin-right: .3em;
-}
-.fa.fa-pull-right {
-  margin-left: .3em;
-}
-/* Deprecated as of 4.4.0 */
 .pull-right {
   float: right;
 }
@@ -6841,10 +6829,6 @@ button.close {
 .fa-spin {
   -webkit-animation: fa-spin 2s infinite linear;
   animation: fa-spin 2s infinite linear;
-}
-.fa-pulse {
-  -webkit-animation: fa-spin 1s infinite steps(8);
-  animation: fa-spin 1s infinite steps(8);
 }
 @-webkit-keyframes fa-spin {
   0% {
@@ -6867,31 +6851,31 @@ button.close {
   }
 }
 .fa-rotate-90 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=1)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=1);
   -webkit-transform: rotate(90deg);
   -ms-transform: rotate(90deg);
   transform: rotate(90deg);
 }
 .fa-rotate-180 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2);
   -webkit-transform: rotate(180deg);
   -ms-transform: rotate(180deg);
   transform: rotate(180deg);
 }
 .fa-rotate-270 {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=3)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
   -webkit-transform: rotate(270deg);
   -ms-transform: rotate(270deg);
   transform: rotate(270deg);
 }
 .fa-flip-horizontal {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=0, mirror=1);
   -webkit-transform: scale(-1, 1);
   -ms-transform: scale(-1, 1);
   transform: scale(-1, 1);
 }
 .fa-flip-vertical {
-  -ms-filter: "progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1)";
+  filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=2, mirror=1);
   -webkit-transform: scale(1, -1);
   -ms-transform: scale(1, -1);
   transform: scale(1, -1);
@@ -7376,7 +7360,6 @@ button.close {
 .fa-twitter:before {
   content: "\f099";
 }
-.fa-facebook-f:before,
 .fa-facebook:before {
   content: "\f09a";
 }
@@ -7389,7 +7372,6 @@ button.close {
 .fa-credit-card:before {
   content: "\f09d";
 }
-.fa-feed:before,
 .fa-rss:before {
   content: "\f09e";
 }
@@ -8027,8 +8009,7 @@ button.close {
 .fa-male:before {
   content: "\f183";
 }
-.fa-gittip:before,
-.fa-gratipay:before {
+.fa-gittip:before {
   content: "\f184";
 }
 .fa-sun-o:before {
@@ -8132,7 +8113,7 @@ button.close {
 .fa-digg:before {
   content: "\f1a6";
 }
-.fa-pied-piper-pp:before {
+.fa-pied-piper:before {
   content: "\f1a7";
 }
 .fa-pied-piper-alt:before {
@@ -8258,7 +8239,6 @@ button.close {
   content: "\f1ce";
 }
 .fa-ra:before,
-.fa-resistance:before,
 .fa-rebel:before {
   content: "\f1d0";
 }
@@ -8272,8 +8252,6 @@ button.close {
 .fa-git:before {
   content: "\f1d3";
 }
-.fa-y-combinator-square:before,
-.fa-yc-square:before,
 .fa-hacker-news:before {
   content: "\f1d4";
 }
@@ -8441,657 +8419,6 @@ button.close {
 }
 .fa-meanpath:before {
   content: "\f20c";
-}
-.fa-buysellads:before {
-  content: "\f20d";
-}
-.fa-connectdevelop:before {
-  content: "\f20e";
-}
-.fa-dashcube:before {
-  content: "\f210";
-}
-.fa-forumbee:before {
-  content: "\f211";
-}
-.fa-leanpub:before {
-  content: "\f212";
-}
-.fa-sellsy:before {
-  content: "\f213";
-}
-.fa-shirtsinbulk:before {
-  content: "\f214";
-}
-.fa-simplybuilt:before {
-  content: "\f215";
-}
-.fa-skyatlas:before {
-  content: "\f216";
-}
-.fa-cart-plus:before {
-  content: "\f217";
-}
-.fa-cart-arrow-down:before {
-  content: "\f218";
-}
-.fa-diamond:before {
-  content: "\f219";
-}
-.fa-ship:before {
-  content: "\f21a";
-}
-.fa-user-secret:before {
-  content: "\f21b";
-}
-.fa-motorcycle:before {
-  content: "\f21c";
-}
-.fa-street-view:before {
-  content: "\f21d";
-}
-.fa-heartbeat:before {
-  content: "\f21e";
-}
-.fa-venus:before {
-  content: "\f221";
-}
-.fa-mars:before {
-  content: "\f222";
-}
-.fa-mercury:before {
-  content: "\f223";
-}
-.fa-intersex:before,
-.fa-transgender:before {
-  content: "\f224";
-}
-.fa-transgender-alt:before {
-  content: "\f225";
-}
-.fa-venus-double:before {
-  content: "\f226";
-}
-.fa-mars-double:before {
-  content: "\f227";
-}
-.fa-venus-mars:before {
-  content: "\f228";
-}
-.fa-mars-stroke:before {
-  content: "\f229";
-}
-.fa-mars-stroke-v:before {
-  content: "\f22a";
-}
-.fa-mars-stroke-h:before {
-  content: "\f22b";
-}
-.fa-neuter:before {
-  content: "\f22c";
-}
-.fa-genderless:before {
-  content: "\f22d";
-}
-.fa-facebook-official:before {
-  content: "\f230";
-}
-.fa-pinterest-p:before {
-  content: "\f231";
-}
-.fa-whatsapp:before {
-  content: "\f232";
-}
-.fa-server:before {
-  content: "\f233";
-}
-.fa-user-plus:before {
-  content: "\f234";
-}
-.fa-user-times:before {
-  content: "\f235";
-}
-.fa-hotel:before,
-.fa-bed:before {
-  content: "\f236";
-}
-.fa-viacoin:before {
-  content: "\f237";
-}
-.fa-train:before {
-  content: "\f238";
-}
-.fa-subway:before {
-  content: "\f239";
-}
-.fa-medium:before {
-  content: "\f23a";
-}
-.fa-yc:before,
-.fa-y-combinator:before {
-  content: "\f23b";
-}
-.fa-optin-monster:before {
-  content: "\f23c";
-}
-.fa-opencart:before {
-  content: "\f23d";
-}
-.fa-expeditedssl:before {
-  content: "\f23e";
-}
-.fa-battery-4:before,
-.fa-battery:before,
-.fa-battery-full:before {
-  content: "\f240";
-}
-.fa-battery-3:before,
-.fa-battery-three-quarters:before {
-  content: "\f241";
-}
-.fa-battery-2:before,
-.fa-battery-half:before {
-  content: "\f242";
-}
-.fa-battery-1:before,
-.fa-battery-quarter:before {
-  content: "\f243";
-}
-.fa-battery-0:before,
-.fa-battery-empty:before {
-  content: "\f244";
-}
-.fa-mouse-pointer:before {
-  content: "\f245";
-}
-.fa-i-cursor:before {
-  content: "\f246";
-}
-.fa-object-group:before {
-  content: "\f247";
-}
-.fa-object-ungroup:before {
-  content: "\f248";
-}
-.fa-sticky-note:before {
-  content: "\f249";
-}
-.fa-sticky-note-o:before {
-  content: "\f24a";
-}
-.fa-cc-jcb:before {
-  content: "\f24b";
-}
-.fa-cc-diners-club:before {
-  content: "\f24c";
-}
-.fa-clone:before {
-  content: "\f24d";
-}
-.fa-balance-scale:before {
-  content: "\f24e";
-}
-.fa-hourglass-o:before {
-  content: "\f250";
-}
-.fa-hourglass-1:before,
-.fa-hourglass-start:before {
-  content: "\f251";
-}
-.fa-hourglass-2:before,
-.fa-hourglass-half:before {
-  content: "\f252";
-}
-.fa-hourglass-3:before,
-.fa-hourglass-end:before {
-  content: "\f253";
-}
-.fa-hourglass:before {
-  content: "\f254";
-}
-.fa-hand-grab-o:before,
-.fa-hand-rock-o:before {
-  content: "\f255";
-}
-.fa-hand-stop-o:before,
-.fa-hand-paper-o:before {
-  content: "\f256";
-}
-.fa-hand-scissors-o:before {
-  content: "\f257";
-}
-.fa-hand-lizard-o:before {
-  content: "\f258";
-}
-.fa-hand-spock-o:before {
-  content: "\f259";
-}
-.fa-hand-pointer-o:before {
-  content: "\f25a";
-}
-.fa-hand-peace-o:before {
-  content: "\f25b";
-}
-.fa-trademark:before {
-  content: "\f25c";
-}
-.fa-registered:before {
-  content: "\f25d";
-}
-.fa-creative-commons:before {
-  content: "\f25e";
-}
-.fa-gg:before {
-  content: "\f260";
-}
-.fa-gg-circle:before {
-  content: "\f261";
-}
-.fa-tripadvisor:before {
-  content: "\f262";
-}
-.fa-odnoklassniki:before {
-  content: "\f263";
-}
-.fa-odnoklassniki-square:before {
-  content: "\f264";
-}
-.fa-get-pocket:before {
-  content: "\f265";
-}
-.fa-wikipedia-w:before {
-  content: "\f266";
-}
-.fa-safari:before {
-  content: "\f267";
-}
-.fa-chrome:before {
-  content: "\f268";
-}
-.fa-firefox:before {
-  content: "\f269";
-}
-.fa-opera:before {
-  content: "\f26a";
-}
-.fa-internet-explorer:before {
-  content: "\f26b";
-}
-.fa-tv:before,
-.fa-television:before {
-  content: "\f26c";
-}
-.fa-contao:before {
-  content: "\f26d";
-}
-.fa-500px:before {
-  content: "\f26e";
-}
-.fa-amazon:before {
-  content: "\f270";
-}
-.fa-calendar-plus-o:before {
-  content: "\f271";
-}
-.fa-calendar-minus-o:before {
-  content: "\f272";
-}
-.fa-calendar-times-o:before {
-  content: "\f273";
-}
-.fa-calendar-check-o:before {
-  content: "\f274";
-}
-.fa-industry:before {
-  content: "\f275";
-}
-.fa-map-pin:before {
-  content: "\f276";
-}
-.fa-map-signs:before {
-  content: "\f277";
-}
-.fa-map-o:before {
-  content: "\f278";
-}
-.fa-map:before {
-  content: "\f279";
-}
-.fa-commenting:before {
-  content: "\f27a";
-}
-.fa-commenting-o:before {
-  content: "\f27b";
-}
-.fa-houzz:before {
-  content: "\f27c";
-}
-.fa-vimeo:before {
-  content: "\f27d";
-}
-.fa-black-tie:before {
-  content: "\f27e";
-}
-.fa-fonticons:before {
-  content: "\f280";
-}
-.fa-reddit-alien:before {
-  content: "\f281";
-}
-.fa-edge:before {
-  content: "\f282";
-}
-.fa-credit-card-alt:before {
-  content: "\f283";
-}
-.fa-codiepie:before {
-  content: "\f284";
-}
-.fa-modx:before {
-  content: "\f285";
-}
-.fa-fort-awesome:before {
-  content: "\f286";
-}
-.fa-usb:before {
-  content: "\f287";
-}
-.fa-product-hunt:before {
-  content: "\f288";
-}
-.fa-mixcloud:before {
-  content: "\f289";
-}
-.fa-scribd:before {
-  content: "\f28a";
-}
-.fa-pause-circle:before {
-  content: "\f28b";
-}
-.fa-pause-circle-o:before {
-  content: "\f28c";
-}
-.fa-stop-circle:before {
-  content: "\f28d";
-}
-.fa-stop-circle-o:before {
-  content: "\f28e";
-}
-.fa-shopping-bag:before {
-  content: "\f290";
-}
-.fa-shopping-basket:before {
-  content: "\f291";
-}
-.fa-hashtag:before {
-  content: "\f292";
-}
-.fa-bluetooth:before {
-  content: "\f293";
-}
-.fa-bluetooth-b:before {
-  content: "\f294";
-}
-.fa-percent:before {
-  content: "\f295";
-}
-.fa-gitlab:before {
-  content: "\f296";
-}
-.fa-wpbeginner:before {
-  content: "\f297";
-}
-.fa-wpforms:before {
-  content: "\f298";
-}
-.fa-envira:before {
-  content: "\f299";
-}
-.fa-universal-access:before {
-  content: "\f29a";
-}
-.fa-wheelchair-alt:before {
-  content: "\f29b";
-}
-.fa-question-circle-o:before {
-  content: "\f29c";
-}
-.fa-blind:before {
-  content: "\f29d";
-}
-.fa-audio-description:before {
-  content: "\f29e";
-}
-.fa-volume-control-phone:before {
-  content: "\f2a0";
-}
-.fa-braille:before {
-  content: "\f2a1";
-}
-.fa-assistive-listening-systems:before {
-  content: "\f2a2";
-}
-.fa-asl-interpreting:before,
-.fa-american-sign-language-interpreting:before {
-  content: "\f2a3";
-}
-.fa-deafness:before,
-.fa-hard-of-hearing:before,
-.fa-deaf:before {
-  content: "\f2a4";
-}
-.fa-glide:before {
-  content: "\f2a5";
-}
-.fa-glide-g:before {
-  content: "\f2a6";
-}
-.fa-signing:before,
-.fa-sign-language:before {
-  content: "\f2a7";
-}
-.fa-low-vision:before {
-  content: "\f2a8";
-}
-.fa-viadeo:before {
-  content: "\f2a9";
-}
-.fa-viadeo-square:before {
-  content: "\f2aa";
-}
-.fa-snapchat:before {
-  content: "\f2ab";
-}
-.fa-snapchat-ghost:before {
-  content: "\f2ac";
-}
-.fa-snapchat-square:before {
-  content: "\f2ad";
-}
-.fa-pied-piper:before {
-  content: "\f2ae";
-}
-.fa-first-order:before {
-  content: "\f2b0";
-}
-.fa-yoast:before {
-  content: "\f2b1";
-}
-.fa-themeisle:before {
-  content: "\f2b2";
-}
-.fa-google-plus-circle:before,
-.fa-google-plus-official:before {
-  content: "\f2b3";
-}
-.fa-fa:before,
-.fa-font-awesome:before {
-  content: "\f2b4";
-}
-.fa-handshake-o:before {
-  content: "\f2b5";
-}
-.fa-envelope-open:before {
-  content: "\f2b6";
-}
-.fa-envelope-open-o:before {
-  content: "\f2b7";
-}
-.fa-linode:before {
-  content: "\f2b8";
-}
-.fa-address-book:before {
-  content: "\f2b9";
-}
-.fa-address-book-o:before {
-  content: "\f2ba";
-}
-.fa-vcard:before,
-.fa-address-card:before {
-  content: "\f2bb";
-}
-.fa-vcard-o:before,
-.fa-address-card-o:before {
-  content: "\f2bc";
-}
-.fa-user-circle:before {
-  content: "\f2bd";
-}
-.fa-user-circle-o:before {
-  content: "\f2be";
-}
-.fa-user-o:before {
-  content: "\f2c0";
-}
-.fa-id-badge:before {
-  content: "\f2c1";
-}
-.fa-drivers-license:before,
-.fa-id-card:before {
-  content: "\f2c2";
-}
-.fa-drivers-license-o:before,
-.fa-id-card-o:before {
-  content: "\f2c3";
-}
-.fa-quora:before {
-  content: "\f2c4";
-}
-.fa-free-code-camp:before {
-  content: "\f2c5";
-}
-.fa-telegram:before {
-  content: "\f2c6";
-}
-.fa-thermometer-4:before,
-.fa-thermometer:before,
-.fa-thermometer-full:before {
-  content: "\f2c7";
-}
-.fa-thermometer-3:before,
-.fa-thermometer-three-quarters:before {
-  content: "\f2c8";
-}
-.fa-thermometer-2:before,
-.fa-thermometer-half:before {
-  content: "\f2c9";
-}
-.fa-thermometer-1:before,
-.fa-thermometer-quarter:before {
-  content: "\f2ca";
-}
-.fa-thermometer-0:before,
-.fa-thermometer-empty:before {
-  content: "\f2cb";
-}
-.fa-shower:before {
-  content: "\f2cc";
-}
-.fa-bathtub:before,
-.fa-s15:before,
-.fa-bath:before {
-  content: "\f2cd";
-}
-.fa-podcast:before {
-  content: "\f2ce";
-}
-.fa-window-maximize:before {
-  content: "\f2d0";
-}
-.fa-window-minimize:before {
-  content: "\f2d1";
-}
-.fa-window-restore:before {
-  content: "\f2d2";
-}
-.fa-times-rectangle:before,
-.fa-window-close:before {
-  content: "\f2d3";
-}
-.fa-times-rectangle-o:before,
-.fa-window-close-o:before {
-  content: "\f2d4";
-}
-.fa-bandcamp:before {
-  content: "\f2d5";
-}
-.fa-grav:before {
-  content: "\f2d6";
-}
-.fa-etsy:before {
-  content: "\f2d7";
-}
-.fa-imdb:before {
-  content: "\f2d8";
-}
-.fa-ravelry:before {
-  content: "\f2d9";
-}
-.fa-eercast:before {
-  content: "\f2da";
-}
-.fa-microchip:before {
-  content: "\f2db";
-}
-.fa-snowflake-o:before {
-  content: "\f2dc";
-}
-.fa-superpowers:before {
-  content: "\f2dd";
-}
-.fa-wpexplorer:before {
-  content: "\f2de";
-}
-.fa-meetup:before {
-  content: "\f2e0";
-}
-.sr-only {
-  position: absolute;
-  width: 1px;
-  height: 1px;
-  padding: 0;
-  margin: -1px;
-  overflow: hidden;
-  clip: rect(0, 0, 0, 0);
-  border: 0;
-}
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
-}
-.sr-only-focusable:active,
-.sr-only-focusable:focus {
-  position: static;
-  width: auto;
-  height: auto;
-  margin: 0;
-  overflow: visible;
-  clip: auto;
 }
 /*!
 *
@@ -9372,10 +8699,6 @@ div.traceback-wrapper {
   max-width: 800px;
   margin: auto;
 }
-div.traceback-wrapper pre.traceback {
-  max-height: 600px;
-  overflow: auto;
-}
 /**
  * Primary styles
  *
@@ -9401,10 +8724,6 @@ body > #header {
   z-index: 100;
 }
 body > #header #header-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  padding: 5px;
   padding-bottom: 5px;
   padding-top: 5px;
   box-sizing: border-box;
@@ -9436,16 +8755,10 @@ body > #header .header-bar {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-[dir="rtl"] #ipython_notebook {
-  margin-right: 10px;
-  margin-left: 0;
-}
-[dir="rtl"] #ipython_notebook.pull-left {
-  float: right !important;
-  float: right;
-}
-.flex-spacer {
-  flex: 1;
+@media (max-width: 991px) {
+  #ipython_notebook {
+    margin-left: 10px;
+  }
 }
 #noscript {
   width: auto;
@@ -9480,14 +8793,8 @@ body > #header .header-bar {
 input.ui-button {
   padding: 0.3em 0.9em;
 }
-span#kernel_logo_widget {
-  margin: 0 10px;
-}
 span#login_widget {
   float: right;
-}
-[dir="rtl"] span#login_widget {
-  float: left;
 }
 span#login_widget > .button,
 #logout {
@@ -9603,9 +8910,6 @@ span#login_widget > .button .badge,
   overflow: auto;
   flex: 1;
 }
-.modal-header {
-  cursor: move;
-}
 @media (min-width: 768px) {
   .modal .modal-dialog {
     width: 700px;
@@ -9626,19 +8930,6 @@ span#login_widget > .button .badge,
   display: inline-block;
   margin-bottom: -4px;
 }
-[dir="rtl"] .center-nav form.pull-left {
-  float: right !important;
-  float: right;
-}
-[dir="rtl"] .center-nav .navbar-text {
-  float: right;
-}
-[dir="rtl"] .navbar-inner {
-  text-align: right;
-}
-[dir="rtl"] div.text-left {
-  text-align: right;
-}
 /*!
 *
 * IPython tree view
@@ -9655,24 +8946,16 @@ span#login_widget > .button .badge,
   margin: 0;
 }
 .alternate_upload input.fileinput {
-  position: absolute;
-  display: block;
-  width: 100%;
-  height: 100%;
-  overflow: hidden;
-  cursor: pointer;
+  text-align: center;
+  vertical-align: middle;
+  display: inline;
   opacity: 0;
   z-index: 2;
-}
-.alternate_upload .btn-xs > input.fileinput {
-  margin: -1px -5px;
+  width: 12ex;
+  margin-right: -12ex;
 }
 .alternate_upload .btn-upload {
-  position: relative;
   height: 22px;
-}
-::-webkit-file-upload-button {
-  cursor: pointer;
 }
 /**
  * Primary styles
@@ -9685,12 +8968,6 @@ ul#tabs {
 ul#tabs a {
   padding-top: 6px;
   padding-bottom: 4px;
-}
-[dir="rtl"] ul#tabs.nav-tabs > li {
-  float: right;
-}
-[dir="rtl"] ul#tabs.nav.nav-tabs {
-  padding-right: 0;
 }
 ul.breadcrumb a:focus,
 ul.breadcrumb a:hover {
@@ -9709,14 +8986,6 @@ ul.breadcrumb span {
 }
 .list_toolbar .tree-buttons {
   padding-top: 1px;
-}
-[dir="rtl"] .list_toolbar .tree-buttons .pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .list_toolbar .col-sm-4,
-[dir="rtl"] .list_toolbar .col-sm-8 {
-  float: right;
 }
 .dynamic-buttons {
   padding-top: 3px;
@@ -9772,7 +9041,7 @@ ul.breadcrumb span {
 .list_item > div input {
   margin-right: 7px;
   margin-left: 14px;
-  vertical-align: text-bottom;
+  vertical-align: baseline;
   line-height: 22px;
   position: relative;
   top: -1px;
@@ -9782,9 +9051,6 @@ ul.breadcrumb span {
   margin-left: -1px;
   vertical-align: baseline;
   line-height: 22px;
-}
-[dir="rtl"] .list_item > div input {
-  margin-right: 0;
 }
 .new-file input[type=checkbox] {
   visibility: hidden;
@@ -9800,14 +9066,6 @@ ul.breadcrumb span {
   margin-left: 7px;
   line-height: 22px;
   vertical-align: baseline;
-}
-.item_modified {
-  margin-right: 7px;
-  margin-left: 7px;
-}
-[dir="rtl"] .item_modified.pull-right {
-  float: left !important;
-  float: left;
 }
 .item_buttons {
   line-height: 1em;
@@ -9836,14 +9094,6 @@ ul.breadcrumb span {
   margin-right: 7px;
   float: left;
 }
-[dir="rtl"] .item_buttons.pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .item_buttons .kernel-name {
-  margin-left: 7px;
-  float: right;
-}
 .toolbar_info {
   height: 24px;
   line-height: 24px;
@@ -9869,32 +9119,15 @@ ul.breadcrumb span {
   background-color: transparent;
   font-weight: bold;
 }
-.sort_button {
-  display: inline-block;
-  padding-left: 7px;
-}
-[dir="rtl"] .sort_button.pull-right {
-  float: left !important;
-  float: left;
-}
 #tree-selector {
   padding-right: 0px;
 }
 #button-select-all {
   min-width: 50px;
 }
-[dir="rtl"] #button-select-all.btn {
-  float: right ;
-}
 #select-all {
   margin-left: 7px;
   margin-right: 2px;
-  margin-top: 2px;
-  height: 16px;
-}
-[dir="rtl"] #select-all.pull-left {
-  float: right !important;
-  float: right;
 }
 .menu_icon {
   margin-right: 2px;
@@ -9912,12 +9145,6 @@ ul.breadcrumb span {
   -moz-osx-font-smoothing: grayscale;
   content: "\f114";
 }
-.folder_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.folder_icon:before.fa-pull-right {
-  margin-left: .3em;
-}
 .folder_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9934,12 +9161,6 @@ ul.breadcrumb span {
   content: "\f02d";
   position: relative;
   top: -1px;
-}
-.notebook_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.notebook_icon:before.fa-pull-right {
-  margin-left: .3em;
 }
 .notebook_icon:before.pull-left {
   margin-right: .3em;
@@ -9959,12 +9180,6 @@ ul.breadcrumb span {
   top: -1px;
   color: #5cb85c;
 }
-.running_notebook_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.running_notebook_icon:before.fa-pull-right {
-  margin-left: .3em;
-}
 .running_notebook_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -9982,12 +9197,6 @@ ul.breadcrumb span {
   position: relative;
   top: -2px;
 }
-.file_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.file_icon:before.fa-pull-right {
-  margin-left: .3em;
-}
 .file_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -10001,12 +9210,6 @@ ul.breadcrumb span {
 ul#new-menu {
   left: auto;
   right: 0;
-}
-#new-menu .dropdown-header {
-  font-size: 10px;
-  border-bottom: 1px solid #e5e5e5;
-  padding: 0 0 3px;
-  margin: -3px 20px 0;
 }
 .kernel-menu-icon {
   padding-right: 12px;
@@ -10062,12 +9265,6 @@ ul#new-menu {
 .rename-button {
   display: none;
 }
-.move-button {
-  display: none;
-}
-.download-button {
-  display: none;
-}
 .shutdown-button {
   display: none;
 }
@@ -10108,12 +9305,6 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
-.dirty-indicator.fa-pull-left {
-  margin-right: .3em;
-}
-.dirty-indicator.fa-pull-right {
-  margin-left: .3em;
-}
 .dirty-indicator.pull-left {
   margin-right: .3em;
 }
@@ -10128,12 +9319,6 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
-}
-.dirty-indicator-dirty.fa-pull-left {
-  margin-right: .3em;
-}
-.dirty-indicator-dirty.fa-pull-right {
-  margin-left: .3em;
 }
 .dirty-indicator-dirty.pull-left {
   margin-right: .3em;
@@ -10150,12 +9335,6 @@ ul#new-menu {
   -moz-osx-font-smoothing: grayscale;
   width: 20px;
 }
-.dirty-indicator-clean.fa-pull-left {
-  margin-right: .3em;
-}
-.dirty-indicator-clean.fa-pull-right {
-  margin-left: .3em;
-}
 .dirty-indicator-clean.pull-left {
   margin-right: .3em;
 }
@@ -10170,12 +9349,6 @@ ul#new-menu {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f00c";
-}
-.dirty-indicator-clean:before.fa-pull-left {
-  margin-right: .3em;
-}
-.dirty-indicator-clean:before.fa-pull-right {
-  margin-left: .3em;
 }
 .dirty-indicator-clean:before.pull-left {
   margin-right: .3em;
@@ -10221,132 +9394,14 @@ ul#new-menu {
     box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
   }
 }
-.CodeMirror-dialog {
-  background-color: #fff;
-}
 /*!
 *
 * IPython notebook
 *
 */
-/* CSS font colors for translated ANSI escape sequences */
-/* The color values are a mix of
-   http://www.xcolors.net/dl/baskerville-ivorylight and
-   http://www.xcolors.net/dl/euphrasia */
-.ansi-black-fg {
-  color: #3E424D;
-}
-.ansi-black-bg {
-  background-color: #3E424D;
-}
-.ansi-black-intense-fg {
-  color: #282C36;
-}
-.ansi-black-intense-bg {
-  background-color: #282C36;
-}
-.ansi-red-fg {
-  color: #E75C58;
-}
-.ansi-red-bg {
-  background-color: #E75C58;
-}
-.ansi-red-intense-fg {
-  color: #B22B31;
-}
-.ansi-red-intense-bg {
-  background-color: #B22B31;
-}
-.ansi-green-fg {
-  color: #00A250;
-}
-.ansi-green-bg {
-  background-color: #00A250;
-}
-.ansi-green-intense-fg {
-  color: #007427;
-}
-.ansi-green-intense-bg {
-  background-color: #007427;
-}
-.ansi-yellow-fg {
-  color: #DDB62B;
-}
-.ansi-yellow-bg {
-  background-color: #DDB62B;
-}
-.ansi-yellow-intense-fg {
-  color: #B27D12;
-}
-.ansi-yellow-intense-bg {
-  background-color: #B27D12;
-}
-.ansi-blue-fg {
-  color: #208FFB;
-}
-.ansi-blue-bg {
-  background-color: #208FFB;
-}
-.ansi-blue-intense-fg {
-  color: #0065CA;
-}
-.ansi-blue-intense-bg {
-  background-color: #0065CA;
-}
-.ansi-magenta-fg {
-  color: #D160C4;
-}
-.ansi-magenta-bg {
-  background-color: #D160C4;
-}
-.ansi-magenta-intense-fg {
-  color: #A03196;
-}
-.ansi-magenta-intense-bg {
-  background-color: #A03196;
-}
-.ansi-cyan-fg {
-  color: #60C6C8;
-}
-.ansi-cyan-bg {
-  background-color: #60C6C8;
-}
-.ansi-cyan-intense-fg {
-  color: #258F8F;
-}
-.ansi-cyan-intense-bg {
-  background-color: #258F8F;
-}
-.ansi-white-fg {
-  color: #C5C1B4;
-}
-.ansi-white-bg {
-  background-color: #C5C1B4;
-}
-.ansi-white-intense-fg {
-  color: #A1A6B2;
-}
-.ansi-white-intense-bg {
-  background-color: #A1A6B2;
-}
-.ansi-default-inverse-fg {
-  color: #FFFFFF;
-}
-.ansi-default-inverse-bg {
-  background-color: #000000;
-}
-.ansi-bold {
-  font-weight: bold;
-}
-.ansi-underline {
-  text-decoration: underline;
-}
-/* The following styles are deprecated an will be removed in a future version */
+/* CSS font colors for translated ANSI colors. */
 .ansibold {
   font-weight: bold;
-}
-.ansi-inverse {
-  outline: 0.5px dotted;
 }
 /* use dark versions for foreground, to improve visibility */
 .ansiblack {
@@ -10425,20 +9480,12 @@ div.cell {
   /* This acts as a spacer between cells, that is outside the border */
   margin: 0px;
   outline: none;
-  position: relative;
-  overflow: visible;
-}
-div.cell:before {
-  position: absolute;
-  display: block;
-  top: -1px;
-  left: -1px;
-  width: 5px;
-  height: calc(100% +  2px);
-  content: '';
-  background: transparent;
+  border-left-width: 1px;
+  padding-left: 5px;
+  background: linear-gradient(to right, transparent -40px, transparent 1px, transparent 1px, transparent 100%);
 }
 div.cell.jupyter-soft-selected {
+  border-left-color: #90CAF9;
   border-left-color: #E3F2FD;
   border-left-width: 1px;
   padding-left: 5px;
@@ -10451,39 +9498,27 @@ div.cell.jupyter-soft-selected {
     border-color: transparent;
   }
 }
-div.cell.selected,
-div.cell.selected.jupyter-soft-selected {
+div.cell.selected {
   border-color: #ababab;
-}
-div.cell.selected:before,
-div.cell.selected.jupyter-soft-selected:before {
-  position: absolute;
-  display: block;
-  top: -1px;
-  left: -1px;
-  width: 5px;
-  height: calc(100% +  2px);
-  content: '';
-  background: #42A5F5;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 5px, transparent 5px, transparent 100%);
 }
 @media print {
-  div.cell.selected,
-  div.cell.selected.jupyter-soft-selected {
+  div.cell.selected {
     border-color: transparent;
   }
 }
+div.cell.selected.jupyter-soft-selected {
+  border-left-width: 0;
+  padding-left: 6px;
+  background: linear-gradient(to right, #42A5F5 -40px, #42A5F5 7px, #E3F2FD 7px, #E3F2FD 100%);
+}
 .edit_mode div.cell.selected {
   border-color: #66BB6A;
-}
-.edit_mode div.cell.selected:before {
-  position: absolute;
-  display: block;
-  top: -1px;
-  left: -1px;
-  width: 5px;
-  height: calc(100% +  2px);
-  content: '';
-  background: #66BB6A;
+  border-left-width: 0px;
+  padding-left: 6px;
+  background: linear-gradient(to right, #66BB6A -40px, #66BB6A 5px, transparent 5px, transparent 100%);
 }
 @media print {
   .edit_mode div.cell.selected {
@@ -10516,7 +9551,6 @@ div.cell.selected.jupyter-soft-selected:before {
   }
 }
 div.inner_cell {
-  min-width: 0;
   /* Old browsers */
   display: -webkit-box;
   -webkit-box-orient: vertical;
@@ -10537,6 +9571,11 @@ div.inner_cell {
   box-flex: 1;
   /* Modern browsers */
   flex: 1;
+}
+@-moz-document url-prefix() {
+  div.inner_cell {
+    overflow-x: hidden;
+  }
 }
 /* input_area and input_prompt must match in top border and margin for alignment */
 div.input_area {
@@ -10679,9 +9718,7 @@ div.input_area > div.highlight > pre {
 .CodeMirror-lines {
   /* In CM2, this used to be 0.4em, but in CM3 it went to 4px. We need the em value because */
   /* we have set a different line-height and want this to scale with that. */
-  /* Note that this should set vertical padding only, since CodeMirror assumes
-       that horizontal padding will be set on CodeMirror pre */
-  padding: 0.4em 0;
+  padding: 0.4em;
 }
 .CodeMirror-linenumber {
   padding: 0 8px 0 4px;
@@ -10691,24 +9728,11 @@ div.input_area > div.highlight > pre {
   border-top-left-radius: 2px;
 }
 .CodeMirror pre {
-  /* In CM3 this went to 4px from 0 in CM2. This sets horizontal padding only,
-    use .CodeMirror-lines for vertical */
-  padding: 0 0.4em;
+  /* In CM3 this went to 4px from 0 in CM2. We need the 0 value because of how we size */
+  /* .CodeMirror-lines */
+  padding: 0;
   border: 0;
   border-radius: 0;
-}
-.CodeMirror-cursor {
-  border-left: 1.4px solid black;
-}
-@media screen and (min-width: 2138px) and (max-width: 4319px) {
-  .CodeMirror-cursor {
-    border-left: 2px solid black;
-  }
-}
-@media screen and (min-width: 4320px) {
-  .CodeMirror-cursor {
-    border-left: 4px solid black;
-  }
 }
 /*
 
@@ -10962,9 +9986,6 @@ div.output_area img.unconfined,
 div.output_area svg.unconfined {
   max-width: none;
 }
-div.output_area .mglyph > img {
-  max-width: none;
-}
 /* This is needed to protect the pre formating from global settings such
    as that of bootstrap */
 .output {
@@ -11003,7 +10024,7 @@ div.output_area .mglyph > img {
 }
 div.output_area pre {
   margin: 0;
-  padding: 1px 0 1px 0;
+  padding: 0;
   border: 0;
   vertical-align: baseline;
   color: black;
@@ -11163,35 +10184,39 @@ div.output_unrecognized a:hover {
 .rendered_html h6:first-child {
   margin-top: 1em;
 }
-.rendered_html ul:not(.list-inline),
-.rendered_html ol:not(.list-inline) {
-  padding-left: 2em;
-}
 .rendered_html ul {
   list-style: disc;
+  margin: 0em 2em;
+  padding-left: 0px;
 }
 .rendered_html ul ul {
   list-style: square;
-  margin-top: 0;
+  margin: 0em 2em;
 }
 .rendered_html ul ul ul {
   list-style: circle;
+  margin: 0em 2em;
 }
 .rendered_html ol {
   list-style: decimal;
+  margin: 0em 2em;
+  padding-left: 0px;
 }
 .rendered_html ol ol {
   list-style: upper-alpha;
-  margin-top: 0;
+  margin: 0em 2em;
 }
 .rendered_html ol ol ol {
   list-style: lower-alpha;
+  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol {
   list-style: lower-roman;
+  margin: 0em 2em;
 }
 .rendered_html ol ol ol ol ol {
   list-style: decimal;
+  margin: 0em 2em;
 }
 .rendered_html * + ul {
   margin-top: 1em;
@@ -11205,23 +10230,14 @@ div.output_unrecognized a:hover {
 }
 .rendered_html pre {
   margin: 1em 2em;
-  padding: 0px;
-  background-color: #fff;
-}
-.rendered_html code {
-  background-color: #eff0f1;
-}
-.rendered_html p code {
-  padding: 1px 5px;
-}
-.rendered_html pre code {
-  background-color: #fff;
 }
 .rendered_html pre,
 .rendered_html code {
   border: 0;
+  background-color: #fff;
   color: #000;
   font-size: 100%;
+  padding: 0px;
 }
 .rendered_html blockquote {
   margin: 1em 2em;
@@ -11229,36 +10245,24 @@ div.output_unrecognized a:hover {
 .rendered_html table {
   margin-left: auto;
   margin-right: auto;
-  border: none;
+  border: 1px solid black;
   border-collapse: collapse;
-  border-spacing: 0;
-  color: black;
-  font-size: 12px;
-  table-layout: fixed;
-}
-.rendered_html thead {
-  border-bottom: 1px solid black;
-  vertical-align: bottom;
 }
 .rendered_html tr,
 .rendered_html th,
 .rendered_html td {
-  text-align: right;
+  border: 1px solid black;
+  border-collapse: collapse;
+  margin: 1em 2em;
+}
+.rendered_html td,
+.rendered_html th {
+  text-align: left;
   vertical-align: middle;
-  padding: 0.5em 0.5em;
-  line-height: normal;
-  white-space: normal;
-  max-width: none;
-  border: none;
+  padding: 4px;
 }
 .rendered_html th {
   font-weight: bold;
-}
-.rendered_html tbody tr:nth-child(odd) {
-  background: #f5f5f5;
-}
-.rendered_html tbody tr:hover {
-  background: rgba(66, 165, 245, 0.2);
 }
 .rendered_html * + table {
   margin-top: 1em;
@@ -11285,15 +10289,6 @@ div.output_unrecognized a:hover {
 .rendered_html img.unconfined,
 .rendered_html svg.unconfined {
   max-width: none;
-}
-.rendered_html .alert {
-  margin-bottom: initial;
-}
-.rendered_html * + .alert {
-  margin-top: 1em;
-}
-[dir="rtl"] .rendered_html p {
-  text-align: right;
 }
 div.text_cell {
   /* Old browsers */
@@ -11348,17 +10343,8 @@ h6:hover .anchor-link {
   overflow-x: auto;
   overflow-y: hidden;
 }
-.text_cell.rendered .rendered_html tr,
-.text_cell.rendered .rendered_html th,
-.text_cell.rendered .rendered_html td {
-  max-width: none;
-}
 .text_cell.unrendered .text_cell_render {
   display: none;
-}
-.text_cell .dropzone .input_area {
-  border: 2px dashed #bababa;
-  margin: -1px;
 }
 .cm-header-1,
 .cm-header-2,
@@ -11495,28 +10481,6 @@ kbd {
   padding-top: 1px;
   padding-bottom: 1px;
 }
-.jupyter-keybindings {
-  padding: 1px;
-  line-height: 24px;
-  border-bottom: 1px solid gray;
-}
-.jupyter-keybindings input {
-  margin: 0;
-  padding: 0;
-  border: none;
-}
-.jupyter-keybindings i {
-  padding: 6px;
-}
-.well code {
-  background-color: #ffffff;
-  border-color: #ababab;
-  border-width: 1px;
-  border-style: solid;
-  padding: 2px;
-  padding-top: 1px;
-  padding-bottom: 1px;
-}
 /* CSS for the cell toolbar */
 .celltoolbar {
   border: thin solid #CFCFCF;
@@ -11649,152 +10613,6 @@ select[multiple].celltoolbar select {
   margin-left: 5px;
   margin-right: 5px;
 }
-.tags_button_container {
-  width: 100%;
-  display: flex;
-}
-.tag-container {
-  display: flex;
-  flex-direction: row;
-  flex-grow: 1;
-  overflow: hidden;
-  position: relative;
-}
-.tag-container > * {
-  margin: 0 4px;
-}
-.remove-tag-btn {
-  margin-left: 4px;
-}
-.tags-input {
-  display: flex;
-}
-.cell-tag:last-child:after {
-  content: "";
-  position: absolute;
-  right: 0;
-  width: 40px;
-  height: 100%;
-  /* Fade to background color of cell toolbar */
-  background: linear-gradient(to right, rgba(0, 0, 0, 0), #EEE);
-}
-.tags-input > * {
-  margin-left: 4px;
-}
-.cell-tag,
-.tags-input input,
-.tags-input button {
-  display: block;
-  width: 100%;
-  height: 32px;
-  padding: 6px 12px;
-  font-size: 13px;
-  line-height: 1.42857143;
-  color: #555555;
-  background-color: #fff;
-  background-image: none;
-  border: 1px solid #ccc;
-  border-radius: 2px;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
-  -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  -o-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
-  height: 30px;
-  padding: 5px 10px;
-  font-size: 12px;
-  line-height: 1.5;
-  border-radius: 1px;
-  box-shadow: none;
-  width: inherit;
-  font-size: inherit;
-  height: 22px;
-  line-height: 22px;
-  padding: 0px 4px;
-  display: inline-block;
-}
-.cell-tag:focus,
-.tags-input input:focus,
-.tags-input button:focus {
-  border-color: #66afe9;
-  outline: 0;
-  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-  box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
-}
-.cell-tag::-moz-placeholder,
-.tags-input input::-moz-placeholder,
-.tags-input button::-moz-placeholder {
-  color: #999;
-  opacity: 1;
-}
-.cell-tag:-ms-input-placeholder,
-.tags-input input:-ms-input-placeholder,
-.tags-input button:-ms-input-placeholder {
-  color: #999;
-}
-.cell-tag::-webkit-input-placeholder,
-.tags-input input::-webkit-input-placeholder,
-.tags-input button::-webkit-input-placeholder {
-  color: #999;
-}
-.cell-tag::-ms-expand,
-.tags-input input::-ms-expand,
-.tags-input button::-ms-expand {
-  border: 0;
-  background-color: transparent;
-}
-.cell-tag[disabled],
-.tags-input input[disabled],
-.tags-input button[disabled],
-.cell-tag[readonly],
-.tags-input input[readonly],
-.tags-input button[readonly],
-fieldset[disabled] .cell-tag,
-fieldset[disabled] .tags-input input,
-fieldset[disabled] .tags-input button {
-  background-color: #eeeeee;
-  opacity: 1;
-}
-.cell-tag[disabled],
-.tags-input input[disabled],
-.tags-input button[disabled],
-fieldset[disabled] .cell-tag,
-fieldset[disabled] .tags-input input,
-fieldset[disabled] .tags-input button {
-  cursor: not-allowed;
-}
-textarea.cell-tag,
-textarea.tags-input input,
-textarea.tags-input button {
-  height: auto;
-}
-select.cell-tag,
-select.tags-input input,
-select.tags-input button {
-  height: 30px;
-  line-height: 30px;
-}
-textarea.cell-tag,
-textarea.tags-input input,
-textarea.tags-input button,
-select[multiple].cell-tag,
-select[multiple].tags-input input,
-select[multiple].tags-input button {
-  height: auto;
-}
-.cell-tag,
-.tags-input button {
-  padding: 0px 4px;
-}
-.cell-tag {
-  background-color: #fff;
-  white-space: nowrap;
-}
-.tags-input input[type=text]:focus {
-  outline: none;
-  box-shadow: none;
-  border-color: #ccc;
-}
 .completions {
   position: absolute;
   z-index: 110;
@@ -11820,28 +10638,16 @@ select[multiple].tags-input button {
 .completions select option.context {
   color: #286090;
 }
+#kernel_logo_widget {
+  float: right !important;
+  float: right;
+}
 #kernel_logo_widget .current_kernel_logo {
   display: none;
   margin-top: -1px;
   margin-bottom: -1px;
   width: 32px;
   height: 32px;
-}
-[dir="rtl"] #kernel_logo_widget {
-  float: left !important;
-  float: left;
-}
-.modal .modal-body .move-path {
-  display: flex;
-  flex-direction: row;
-  justify-content: space;
-  align-items: center;
-}
-.modal .modal-body .move-path .server-root {
-  padding-right: 20px;
-}
-.modal .modal-body .move-path .path-input {
-  flex: 1;
 }
 #menubar {
   box-sizing: border-box;
@@ -11863,41 +10669,11 @@ select[multiple].tags-input button {
 #menubar .navbar-collapse {
   clear: left;
 }
-[dir="rtl"] #menubar .navbar-toggle {
-  float: right;
-}
-[dir="rtl"] #menubar .navbar-collapse {
-  clear: right;
-}
-[dir="rtl"] #menubar .navbar-nav {
-  float: right;
-}
-[dir="rtl"] #menubar .nav {
-  padding-right: 0px;
-}
-[dir="rtl"] #menubar .navbar-nav > li {
-  float: right;
-}
-[dir="rtl"] #menubar .navbar-right {
-  float: left !important;
-}
-[dir="rtl"] ul.dropdown-menu {
-  text-align: right;
-  left: auto;
-}
-[dir="rtl"] ul#new-menu.dropdown-menu {
-  right: auto;
-  left: 0;
-}
 .nav-wrapper {
   border-bottom: 1px solid #e7e7e7;
 }
 i.menu-icon {
   padding-top: 4px;
-}
-[dir="rtl"] i.menu-icon.pull-right {
-  float: left !important;
-  float: left;
 }
 ul#help_menu li a {
   overflow: hidden;
@@ -11905,17 +10681,6 @@ ul#help_menu li a {
 }
 ul#help_menu li a i {
   margin-right: -1.2em;
-}
-[dir="rtl"] ul#help_menu li a {
-  padding-left: 2.2em;
-}
-[dir="rtl"] ul#help_menu li a i {
-  margin-right: 0;
-  margin-left: -1.2em;
-}
-[dir="rtl"] ul#help_menu li a i.pull-right {
-  float: left !important;
-  float: left;
 }
 .dropdown-submenu {
   position: relative;
@@ -11925,10 +10690,6 @@ ul#help_menu li a i {
   left: 100%;
   margin-top: -6px;
   margin-left: -1px;
-}
-[dir="rtl"] .dropdown-submenu > .dropdown-menu {
-  right: 100%;
-  margin-right: -1px;
 }
 .dropdown-submenu:hover > .dropdown-menu {
   display: block;
@@ -11947,23 +10708,11 @@ ul#help_menu li a i {
   margin-top: 2px;
   margin-right: -10px;
 }
-.dropdown-submenu > a:after.fa-pull-left {
-  margin-right: .3em;
-}
-.dropdown-submenu > a:after.fa-pull-right {
-  margin-left: .3em;
-}
 .dropdown-submenu > a:after.pull-left {
   margin-right: .3em;
 }
 .dropdown-submenu > a:after.pull-right {
   margin-left: .3em;
-}
-[dir="rtl"] .dropdown-submenu > a:after {
-  float: left;
-  content: "\f0d9";
-  margin-right: 0;
-  margin-left: -10px;
 }
 .dropdown-submenu:hover > a:after {
   color: #262626;
@@ -11980,10 +10729,6 @@ ul#help_menu li a i {
   float: right;
   z-index: 10;
 }
-[dir="rtl"] #notification_area {
-  float: left !important;
-  float: left;
-}
 .indicator_area {
   float: right !important;
   float: right;
@@ -11994,10 +10739,6 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
-}
-[dir="rtl"] .indicator_area {
-  float: left !important;
-  float: left;
 }
 #kernel_indicator {
   float: right !important;
@@ -12015,12 +10756,6 @@ ul#help_menu li a i {
   padding-left: 5px;
   padding-right: 5px;
 }
-[dir="rtl"] #kernel_indicator {
-  float: left !important;
-  float: left;
-  border-left: 0;
-  border-right: 1px solid;
-}
 #modal_indicator {
   float: right !important;
   float: right;
@@ -12031,10 +10766,6 @@ ul#help_menu li a i {
   z-index: 10;
   text-align: center;
   width: auto;
-}
-[dir="rtl"] #modal_indicator {
-  float: left !important;
-  float: left;
 }
 #readonly-indicator {
   float: right !important;
@@ -12065,12 +10796,6 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f040";
 }
-.edit_mode .modal_indicator:before.fa-pull-left {
-  margin-right: .3em;
-}
-.edit_mode .modal_indicator:before.fa-pull-right {
-  margin-left: .3em;
-}
 .edit_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
 }
@@ -12085,12 +10810,6 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: ' ';
-}
-.command_mode .modal_indicator:before.fa-pull-left {
-  margin-right: .3em;
-}
-.command_mode .modal_indicator:before.fa-pull-right {
-  margin-left: .3em;
 }
 .command_mode .modal_indicator:before.pull-left {
   margin-right: .3em;
@@ -12107,12 +10826,6 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f10c";
 }
-.kernel_idle_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.kernel_idle_icon:before.fa-pull-right {
-  margin-left: .3em;
-}
 .kernel_idle_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -12127,12 +10840,6 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f111";
-}
-.kernel_busy_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.kernel_busy_icon:before.fa-pull-right {
-  margin-left: .3em;
 }
 .kernel_busy_icon:before.pull-left {
   margin-right: .3em;
@@ -12149,12 +10856,6 @@ ul#help_menu li a i {
   -moz-osx-font-smoothing: grayscale;
   content: "\f1e2";
 }
-.kernel_dead_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.kernel_dead_icon:before.fa-pull-right {
-  margin-left: .3em;
-}
 .kernel_dead_icon:before.pull-left {
   margin-right: .3em;
 }
@@ -12169,12 +10870,6 @@ ul#help_menu li a i {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   content: "\f127";
-}
-.kernel_disconnected_icon:before.fa-pull-left {
-  margin-right: .3em;
-}
-.kernel_disconnected_icon:before.fa-pull-right {
-  margin-left: .3em;
 }
 .kernel_disconnected_icon:before.pull-left {
   margin-right: .3em;
@@ -12551,7 +11246,7 @@ div#pager .ui-resizable-handle::after {
 }
 .shortcut_key {
   display: inline-block;
-  width: 21ex;
+  width: 20ex;
   text-align: right;
   font-family: monospace;
 }
@@ -12565,46 +11260,27 @@ div#pager .ui-resizable-handle::after {
   flex: 1;
 }
 span.save_widget {
-  height: 30px;
-  margin-top: 4px;
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  width: 50%;
-  flex: 1;
+  margin-top: 6px;
 }
 span.save_widget span.filename {
-  height: 100%;
+  height: 1em;
   line-height: 1em;
+  padding: 3px;
   margin-left: 16px;
   border: none;
   font-size: 146.5%;
-  text-overflow: ellipsis;
-  overflow: hidden;
-  white-space: nowrap;
   border-radius: 2px;
 }
 span.save_widget span.filename:hover {
   background-color: #e6e6e6;
 }
-[dir="rtl"] span.save_widget.pull-left {
-  float: right !important;
-  float: right;
-}
-[dir="rtl"] span.save_widget span.filename {
-  margin-left: 0;
-  margin-right: 16px;
-}
 span.checkpoint_status,
 span.autosave_status {
   font-size: small;
-  white-space: nowrap;
-  padding: 0 5px;
 }
 @media (max-width: 767px) {
   span.save_widget {
     font-size: small;
-    padding: 0 0 0 5px;
   }
   span.checkpoint_status,
   span.autosave_status {
@@ -12648,9 +11324,6 @@ span.autosave_status {
   margin-top: 0px;
   margin-left: 5px;
 }
-.toolbar-btn-label {
-  margin-left: 6px;
-}
 #maintoolbar {
   margin-bottom: -3px;
   margin-top: -8px;
@@ -12670,10 +11343,6 @@ span.autosave_status {
 }
 .select-xs {
   height: 24px;
-}
-[dir="rtl"] .btn-group > .btn,
-.btn-group-vertical > .btn {
-  float: right;
 }
 .pulse,
 .dropdown-menu > li > a.pulse,
@@ -12824,10 +11493,6 @@ ul.typeahead-list i {
   margin-left: -10px;
   width: 18px;
 }
-[dir="rtl"] ul.typeahead-list i {
-  margin-left: 0;
-  margin-right: -10px;
-}
 ul.typeahead-list {
   max-height: 80vh;
   overflow: auto;
@@ -12836,13 +11501,6 @@ ul.typeahead-list > li > a {
   /** Firefox bug **/
   /* see https://github.com/jupyter/notebook/issues/559 */
   white-space: normal;
-}
-ul.typeahead-list  > li > a.pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .typeahead-list {
-  text-align: right;
 }
 .cmd-palette .modal-body {
   padding: 7px;
@@ -12854,19 +11512,10 @@ ul.typeahead-list  > li > a.pull-right {
   outline: none;
 }
 .no-shortcut {
-  min-width: 20px;
-  color: transparent;
-}
-[dir="rtl"] .no-shortcut.pull-right {
-  float: left !important;
-  float: left;
-}
-[dir="rtl"] .command-shortcut.pull-right {
-  float: left !important;
-  float: left;
+  display: none;
 }
 .command-shortcut:before {
-  content: "(command mode)";
+  content: "(command)";
   padding-right: 3px;
   color: #777777;
 }
@@ -12875,10 +11524,6 @@ ul.typeahead-list  > li > a.pull-right {
   padding-right: 3px;
   color: #777777;
 }
-[dir="rtl"] .edit-shortcut.pull-right {
-  float: left !important;
-  float: left;
-}
 #find-and-replace #replace-preview .match,
 #find-and-replace #replace-preview .insert {
   background-color: #BBDEFB;
@@ -12886,12 +11531,6 @@ ul.typeahead-list  > li > a.pull-right {
   border-style: solid;
   border-width: 1px;
   border-radius: 0px;
-}
-[dir="ltr"] #find-and-replace .input-group-btn + .form-control {
-  border-left: none;
-}
-[dir="rtl"] #find-and-replace .input-group-btn + .form-control {
-  border-right: none;
 }
 #find-and-replace #replace-preview .replace .match {
   background-color: #FFCDD2;
@@ -12919,7 +11558,6 @@ ul.typeahead-list  > li > a.pull-right {
   box-shadow: 0px 0px 12px 1px rgba(87, 87, 87, 0.2);
 }
 .terminal-app .terminal {
-  width: 100%;
   float: left;
   font-family: monospace;
   color: white;
@@ -12933,9 +11571,6 @@ ul.typeahead-list  > li > a.pull-right {
 .terminal-app .terminal dummy-screen {
   line-height: 1em;
   font-size: 14px;
-}
-.terminal-app .terminal .xterm-rows {
-  padding: 10px;
 }
 .terminal-app .terminal-cursor {
   color: black;
@@ -12996,10 +11631,8 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .mh { color: #666666 } /* Literal.Number.Hex */
 .highlight .mi { color: #666666 } /* Literal.Number.Integer */
 .highlight .mo { color: #666666 } /* Literal.Number.Oct */
-.highlight .sa { color: #BA2121 } /* Literal.String.Affix */
 .highlight .sb { color: #BA2121 } /* Literal.String.Backtick */
 .highlight .sc { color: #BA2121 } /* Literal.String.Char */
-.highlight .dl { color: #BA2121 } /* Literal.String.Delimiter */
 .highlight .sd { color: #BA2121; font-style: italic } /* Literal.String.Doc */
 .highlight .s2 { color: #BA2121 } /* Literal.String.Double */
 .highlight .se { color: #BB6622; font-weight: bold } /* Literal.String.Escape */
@@ -13010,11 +11643,9 @@ ul.typeahead-list  > li > a.pull-right {
 .highlight .s1 { color: #BA2121 } /* Literal.String.Single */
 .highlight .ss { color: #19177C } /* Literal.String.Symbol */
 .highlight .bp { color: #008000 } /* Name.Builtin.Pseudo */
-.highlight .fm { color: #0000FF } /* Name.Function.Magic */
 .highlight .vc { color: #19177C } /* Name.Variable.Class */
 .highlight .vg { color: #19177C } /* Name.Variable.Global */
 .highlight .vi { color: #19177C } /* Name.Variable.Instance */
-.highlight .vm { color: #19177C } /* Name.Variable.Magic */
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
@@ -13056,25 +11687,6 @@ ul.typeahead-list  > li > a.pull-right {
 .ansi-bold { font-weight: bold; }
 
     </style>
-<style type="text/css">
-    body[data-notebook-name] > #header #header-container:not(.show-panel), /* body has data-notebook-name attribute when 
-a notebook is open. this rule won't be applied when the notebook is not open (in 404 view for example) */
-body[data-notebook-name] #menubar-container #maintoolbar:not(.show-panel),
-body[data-notebook-name] #menubar-container ul.navbar-nav:not(.show-panel) {
-  display: none;
-}
-
-#menubar.only-panel #menus.navbar-default {
-    background: #fff;
-    border-color: #fff;
-}
-
-.toolbar.with-statusbar{
-    margin-top: 3px;
-    margin-bottom: 0;
-}
-
-    </style>
 
 
 <style type="text/css">
@@ -13087,7 +11699,9 @@ body {
 div#notebook {
   overflow: visible;
   border-top: none;
-}@media print {
+}
+
+@media print {
   div.cell {
     display: block;
     page-break-inside: avoid;
@@ -13108,7 +11722,7 @@ div#notebook {
 
 <!-- Loading mathjax macro -->
 <!-- Load mathjax -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS_HTML"></script>
+    <script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS_HTML"></script>
     <!-- MathJax configuration -->
     <script type="text/x-mathjax-config">
     MathJax.Hub.Config({
@@ -13132,8 +11746,10 @@ div#notebook {
   <div tabindex="-1" id="notebook" class="border-box-sizing">
     <div class="container" id="notebook-container">
 
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h1 id="Project:-Identify-Customer-Segments">Project: Identify Customer Segments<a class="anchor-link" href="#Project:-Identify-Customer-Segments">&#182;</a></h1><p>In this project, you will apply unsupervised learning techniques to identify segments of the population that form the core customer base for a mail-order sales company in Germany. These segments can then be used to direct marketing campaigns towards audiences that will have the highest expected rate of returns. The data that you will use has been provided by our partners at Bertelsmann Arvato Analytics, and represents a real-life data science task.</p>
 <p>This notebook will help you complete this task by providing a framework within which you will perform your analysis steps. In each step of the project, you will see some text describing the subtask that you will perform, followed by one or more code cells for you to complete your work. <strong>Feel free to add additional code and markdown cells as you go along so that you can explore everything in precise chunks.</strong> The code cells provided in the base template will outline only the major tasks, and will usually not be enough to cover all of the minor tasks that comprise it.</p>
@@ -13160,13 +11776,15 @@ div#notebook {
 <span class="o">%</span><span class="k">matplotlib</span> inline
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-0:-Load-the-Data">Step 0: Load the Data<a class="anchor-link" href="#Step-0:-Load-the-Data">&#182;</a></h3><p>There are four files associated with this project (not including this one):</p>
 <ul>
@@ -13191,7 +11809,7 @@ div#notebook {
 <span class="n">azdias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Udacity_AZDIAS_Subset.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -13205,7 +11823,7 @@ div#notebook {
 <span class="n">feat_info</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;AZDIAS_Feature_Summary.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -13222,7 +11840,7 @@ div#notebook {
 <span class="n">azdias</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">10</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -13230,22 +11848,14 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>There are 891221 rows and 85 columns
 </pre>
 </div>
 </div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[4]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[4]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -13542,8 +12152,10 @@ div#notebook {
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p><strong>Tip</strong>: Add additional cells to keep everything in reasonably-sized chunks! Keyboard shortcut <code>esc --&gt; a</code> (press escape to enter command mode, then press the 'A' key) adds a new cell before the active cell, and <code>esc --&gt; b</code> adds a new cell after the active cell. If you need to convert an active cell to a markdown cell, use <code>esc --&gt; m</code> and to convert to a code cell, use <code>esc --&gt; y</code>.</p>
 </blockquote>
@@ -13562,7 +12174,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">feat_info</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -13570,11 +12182,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[5]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[5]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14064,13 +12672,15 @@ div#notebook {
                 <span class="n">azdias</span><span class="o">.</span><span class="n">loc</span><span class="p">[</span><span class="n">azdias</span><span class="p">[</span><span class="n">col_name</span><span class="p">]</span><span class="o">==</span><span class="n">na_value</span><span class="p">,</span><span class="n">col_name</span><span class="p">]</span><span class="o">=</span><span class="n">np</span><span class="o">.</span><span class="n">nan</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Step-1.1.2:-Assess-Missing-Data-in-Each-Column">Step 1.1.2: Assess Missing Data in Each Column<a class="anchor-link" href="#Step-1.1.2:-Assess-Missing-Data-in-Each-Column">&#182;</a></h4><p>How much missing data is present in each column? There are a few columns that are outliers in terms of the proportion of values that are missing. You will want to use matplotlib's <a href="https://matplotlib.org/api/_as_gen/matplotlib.pyplot.hist.html"><code>hist()</code></a> function to visualize the distribution of missing value counts to find these columns. Identify and document these columns. While some of these columns might have justifications for keeping or re-encoding the data, for this project you should just remove them from the dataframe. (Feel free to make remarks about these outlier columns in the discussion, however!)</p>
 <p>For the remaining features, are there any patterns in which columns have, or share, missing data?</p>
@@ -14086,7 +12696,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;azdias_converted.csv&#39;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">,</span> <span class="n">index</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14100,7 +12710,7 @@ div#notebook {
 <span class="n">azdias_new</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;azdias_converted.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14117,7 +12727,7 @@ div#notebook {
 <span class="n">missing_percent</span> <span class="o">=</span> <span class="n">missing</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">azdias_new</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14136,7 +12746,7 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14144,11 +12754,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14177,7 +12783,7 @@ div#notebook {
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14185,11 +12791,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14214,7 +12816,7 @@ div#notebook {
 <span class="n">missing_col</span> <span class="o">=</span> <span class="n">missing_percent</span><span class="p">[</span><span class="n">missing_percent</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">]</span><span class="o">.</span><span class="n">index</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14227,7 +12829,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_col</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14235,11 +12837,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[13]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[13]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14262,7 +12860,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_new</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">missing_col</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14275,7 +12873,7 @@ div#notebook {
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">missing_percent</span><span class="p">[</span><span class="n">missing_percent</span> <span class="o">&gt;=</span> <span class="mf">0.2</span><span class="p">]</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14283,11 +12881,7 @@ div#notebook {
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[15]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[15]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14314,7 +12908,7 @@ dtype: float64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_new</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14322,11 +12916,7 @@ dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[16]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[16]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14339,16 +12929,20 @@ dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.1.2:-Assess-Missing-Data-in-Each-Column">Discussion 1.1.2: Assess Missing Data in Each Column<a class="anchor-link" href="#Discussion-1.1.2:-Assess-Missing-Data-in-Each-Column">&#182;</a></h4><p>Most of features have missing values range from 0 to 20%, but there are six features which have over 20% missing values. These features are 'AGER_TYP', 'GEBURTSJAHR', 'KK_KUNDENTYP', 'TITEL_KZ', 'ALTER_HH', 'KBA05_BAUMAX'. They have 76.95%, 44.02%, 65.59%, 99.75%, 34.81% and 53.46% missing values, respectively. It is not possible to replace these missing values without bias so I delete them from the dataset.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Step-1.1.3:-Assess-Missing-Data-in-Each-Row">Step 1.1.3: Assess Missing Data in Each Row<a class="anchor-link" href="#Step-1.1.3:-Assess-Missing-Data-in-Each-Row">&#182;</a></h4><p>Now, you'll perform a similar assessment for the rows of the dataset. How much data is missing in each row? As with the columns, you should see some groups of points that have a very different numbers of missing values. Divide the data into two subsets: one for data points that are above some threshold for missing values, and a second subset for points below that threshold.</p>
 <p>In order to know what to do with the outlier rows, we should see if the distribution of data values on columns that are not missing data (or are missing very little data) are similar or different between the two groups. Select at least five of these columns and compare the distribution of values.</p>
@@ -14376,7 +12970,7 @@ dtype: float64</pre>
 <span class="n">plt</span><span class="o">.</span><span class="n">show</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14384,11 +12978,7 @@ dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14414,7 +13004,7 @@ dtype: float64</pre>
 <span class="n">azdias_high</span> <span class="o">=</span> <span class="n">azdias_new</span><span class="p">[</span><span class="n">missing_row</span><span class="o">&gt;</span><span class="mi">20</span><span class="p">]</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14428,7 +13018,7 @@ dtype: float64</pre>
 <span class="nb">len</span><span class="p">(</span><span class="n">azdias_high</span><span class="p">)</span><span class="o">/</span><span class="nb">len</span><span class="p">(</span><span class="n">azdias_new</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14436,11 +13026,7 @@ dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[19]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[19]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -14470,7 +13056,7 @@ dtype: float64</pre>
         <span class="n">sns</span><span class="o">.</span><span class="n">countplot</span><span class="p">(</span><span class="n">azdias_high</span><span class="p">[</span><span class="n">attr</span><span class="p">],</span> <span class="n">ax</span><span class="o">=</span><span class="n">ax</span><span class="p">[</span><span class="n">i</span><span class="p">,</span><span class="mi">1</span><span class="p">])</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14483,7 +13069,7 @@ dtype: float64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">compare_distribution</span><span class="p">(</span><span class="mi">8</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14491,11 +13077,7 @@ dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -14510,8 +13092,10 @@ dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.1.3:-Assess-Missing-Data-in-Each-Row">Discussion 1.1.3: Assess Missing Data in Each Row<a class="anchor-link" href="#Discussion-1.1.3:-Assess-Missing-Data-in-Each-Row">&#182;</a></h4><p>We can see in Figure 3 that most of rows have less than 20 missing values so we set 20 as the threshold. 
 In order to see if the distribution of data values on columns that are not missing data are similar or different between the two groups, we choose 8 columns in this experiment and make barplots to compare them. We can easily find they are different. So, it is not appropriate to replace these missing values and do analysis with them. And because there are only 10% of high missing value rows, I would like to choose to drop them in the following analysis.</p>
@@ -14519,8 +13103,10 @@ In order to see if the distribution of data values on columns that are not missi
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-1.2:-Select-and-Re-Encode-Features">Step 1.2: Select and Re-Encode Features<a class="anchor-link" href="#Step-1.2:-Select-and-Re-Encode-Features">&#182;</a></h3><p>Checking for missing data isn't the only way in which you can prepare a dataset for analysis. Since the unsupervised learning techniques to be used will only work on data that is encoded numerically, you need to make a few encoding changes or additional assumptions to be able to make progress. In addition, while almost all of the values in the dataset are encoded using numbers, not all of them represent numeric values. Check the third column of the feature summary (<code>feat_info</code>) for a summary of types of measurement.</p>
 <ul>
@@ -14548,7 +13134,7 @@ In order to see if the distribution of data values on columns that are not missi
 <span class="n">feat_info</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="n">miss_col_index</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">0</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14563,7 +13149,7 @@ In order to see if the distribution of data values on columns that are not missi
 <span class="n">feat_info</span><span class="o">.</span><span class="n">groupby</span><span class="p">(</span><span class="s1">&#39;type&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">count</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14571,11 +13157,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[23]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[23]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14651,7 +13233,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">feat_info</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14659,11 +13241,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>                attribute information_level         type missing_or_unknown
 1    ALTERSKATEGORIE_GROB            person      ordinal           [-1,0,9]
@@ -14747,7 +13325,7 @@ In order to see if the distribution of data values on columns that are not missi
 <span class="n">feat_cat</span> <span class="o">=</span> <span class="n">feat_info</span><span class="p">[</span><span class="n">feat_info</span><span class="p">[</span><span class="s1">&#39;type&#39;</span><span class="p">]</span> <span class="o">==</span> <span class="s1">&#39;categorical&#39;</span><span class="p">]</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14760,7 +13338,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_few</span><span class="p">[</span><span class="n">feat_cat</span><span class="p">[</span><span class="s1">&#39;attribute&#39;</span><span class="p">]]</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14768,11 +13346,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[26]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[26]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -14947,7 +13521,7 @@ In order to see if the distribution of data values on columns that are not missi
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;Multi-level variables are:&#39;</span><span class="p">,</span> <span class="n">multi_attr</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14955,11 +13529,7 @@ In order to see if the distribution of data values on columns that are not missi
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>Binary variables are: [&#39;ANREDE_KZ&#39;, &#39;GREEN_AVANTGARDE&#39;, &#39;SOHO_KZ&#39;, &#39;OST_WEST_KZ&#39;]
 Multi-level variables are: [&#39;CJT_GESAMTTYP&#39;, &#39;FINANZTYP&#39;, &#39;GFK_URLAUBERTYP&#39;, &#39;LP_FAMILIE_FEIN&#39;, &#39;LP_FAMILIE_GROB&#39;, &#39;LP_STATUS_FEIN&#39;, &#39;LP_STATUS_GROB&#39;, &#39;NATIONALITAET_KZ&#39;, &#39;SHOPPER_TYP&#39;, &#39;VERS_TYP&#39;, &#39;ZABEOTYP&#39;, &#39;GEBAEUDETYP&#39;, &#39;CAMEO_DEUG_2015&#39;, &#39;CAMEO_DEU_2015&#39;]
@@ -14984,7 +13554,7 @@ Multi-level variables are: [&#39;CJT_GESAMTTYP&#39;, &#39;FINANZTYP&#39;, &#39;G
 <span class="n">azdias_few</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;CAMEO_DEU_2015&#39;</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -14992,11 +13562,7 @@ Multi-level variables are: [&#39;CJT_GESAMTTYP&#39;, &#39;FINANZTYP&#39;, &#39;G
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/lib/python3.6/site-packages/ipykernel_launcher.py:4: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame.
@@ -15025,7 +13591,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">multi_attr</span><span class="o">.</span><span class="n">remove</span><span class="p">(</span><span class="s1">&#39;CAMEO_DEU_2015&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15039,21 +13605,25 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias_few</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">azdias_few</span><span class="p">,</span> <span class="n">prefix</span> <span class="o">=</span> <span class="n">multi_attr</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">multi_attr</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.2.1:-Re-Encode-Categorical-Features">Discussion 1.2.1: Re-Encode Categorical Features<a class="anchor-link" href="#Discussion-1.2.1:-Re-Encode-Categorical-Features">&#182;</a></h4><p>We change OST_WEST_KZ's values to 0 and 1 because it is binary variable. We drop 'CAMEO_DEU_2015' becasue there are 45 different variables and it is strongly correlated to 'CAMEO_DEUG_2015'. Then we change all multi-level categoricals into multiple dummy variables.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Step-1.2.2:-Engineer-Mixed-Type-Features">Step 1.2.2: Engineer Mixed-Type Features<a class="anchor-link" href="#Step-1.2.2:-Engineer-Mixed-Type-Features">&#182;</a></h4><p>There are a handful of features that are marked as "mixed" in the feature summary that require special treatment in order to be included in the analysis. There are two in particular that deserve attention; the handling of the rest are up to your own choices:</p>
 <ul>
@@ -15075,7 +13645,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">feat_mix</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15083,11 +13653,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[31]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[31]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15168,8 +13734,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dictionary:-PRAEGENDE_JUGENDJAHRE">Dictionary: PRAEGENDE_JUGENDJAHRE<a class="anchor-link" href="#Dictionary:-PRAEGENDE_JUGENDJAHRE">&#182;</a></h3><p>Dominating movement of person's youth (avantgarde vs. mainstream; east vs. west)</p>
 <ul>
@@ -15195,8 +13763,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>For 'PRAEGENDE_JUGENDJAHRE', we encode them by following rules:{40s:0, 50s:1, 60s:2, 70s:3, 80s:4, 90s:5},{Mainstream:0, Avantgarde:1}</p>
 
@@ -15215,7 +13785,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias_few</span><span class="p">[</span><span class="s2">&quot;Movement&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">azdias_few</span><span class="p">[</span><span class="s2">&quot;PRAEGENDE_JUGENDJAHRE&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">map</span><span class="p">(</span><span class="n">movement</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15228,13 +13798,15 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_few</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;PRAEGENDE_JUGENDJAHRE&quot;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Dictionary:-CAMEO_INTL_2015">Dictionary: CAMEO_INTL_2015<a class="anchor-link" href="#Dictionary:-CAMEO_INTL_2015">&#182;</a></h3><p>German CAMEO: Wealth / Life Stage Typology, mapped to international code</p>
 <ul>
@@ -15302,7 +13874,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
         <span class="k">return</span> <span class="mi">5</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15316,7 +13888,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias_few</span><span class="p">[</span><span class="s2">&quot;Life_stage&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">azdias_few</span><span class="p">[</span><span class="s2">&quot;CAMEO_INTL_2015&quot;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="n">life_stage</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15329,7 +13901,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_few</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s2">&quot;CAMEO_INTL_2015&quot;</span><span class="p">,</span> <span class="n">axis</span> <span class="o">=</span> <span class="mi">1</span><span class="p">,</span> <span class="n">inplace</span> <span class="o">=</span> <span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15342,7 +13914,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">azdias_few</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15350,11 +13922,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[37]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[37]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -15531,16 +14099,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Discussion-1.2.2:-Engineer-Mixed-Type-Features">Discussion 1.2.2: Engineer Mixed-Type Features<a class="anchor-link" href="#Discussion-1.2.2:-Engineer-Mixed-Type-Features">&#182;</a></h4><p>We encode PRAEGENDE_JUGENDJAHRE into Decade and Movement and encode CAMEO_INTL_2015 into Wealth and Life_stage then drop two original attributes.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h4 id="Step-1.2.3:-Complete-Feature-Selection">Step 1.2.3: Complete Feature Selection<a class="anchor-link" href="#Step-1.2.3:-Complete-Feature-Selection">&#182;</a></h4><p>In order to finish this step up, you need to make sure that your data frame now only has the columns that you want to keep. To summarize, the dataframe should consist of the following:</p>
 <ul>
@@ -15562,7 +14134,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="c1"># take care of them here. (Dealing with missing data will come in step 2.1.)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15577,7 +14149,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias_few</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15585,11 +14157,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[39]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[39]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15602,8 +14170,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-1.3:-Create-a-Cleaning-Function">Step 1.3: Create a Cleaning Function<a class="anchor-link" href="#Step-1.3:-Create-a-Cleaning-Function">&#182;</a></h3><p>Even though you've finished cleaning up the general population demographics data, it's important to look ahead to the future and realize that you'll need to perform the same cleaning steps on the customer demographics data. In this substep, complete the function below to execute the main feature selection, encoding, and re-engineering steps you performed above. Then, when it comes to looking at the customer data in Step 3, you can just run this function on that DataFrame to get the trimmed dataset in a single step.</p>
 
@@ -15720,7 +14290,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="k">return</span> <span class="n">df</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15734,7 +14304,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;Udacity_AZDIAS_Subset.csv&#39;</span><span class="p">,</span> <span class="n">delimiter</span><span class="o">=</span><span class="s1">&#39;;&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15747,7 +14317,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">(</span><span class="n">azdias</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15760,7 +14330,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15768,11 +14338,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[43]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[43]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -15785,16 +14351,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p>Same as what we've done below!</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Step-2:-Feature-Transformation">Step 2: Feature Transformation<a class="anchor-link" href="#Step-2:-Feature-Transformation">&#182;</a></h2><h3 id="Step-2.1:-Apply-Feature-Scaling">Step 2.1: Apply Feature Scaling<a class="anchor-link" href="#Step-2.1:-Apply-Feature-Scaling">&#182;</a></h3><p>Before we apply dimensionality reduction techniques to the data, we need to perform feature scaling so that the principal component vectors are not influenced by the natural differences in scale for features. Starting from this part of the project, you'll want to keep an eye on the <a href="http://scikit-learn.org/stable/modules/classes.html">API reference page for sklearn</a> to help you navigate to all of the classes and functions that you'll need. In this substep, you'll need to check the following:</p>
 <ul>
@@ -15814,7 +14384,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.preprocessing</span> <span class="k">import</span> <span class="n">Imputer</span><span class="p">,</span> <span class="n">StandardScaler</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15830,7 +14400,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">data_clean</span> <span class="o">=</span> <span class="n">fill_nan</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15847,7 +14417,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">data_scale</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -15855,11 +14425,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[46]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[46]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -16036,16 +14602,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.1:-Apply-Feature-Scaling">Discussion 2.1: Apply Feature Scaling<a class="anchor-link" href="#Discussion-2.1:-Apply-Feature-Scaling">&#182;</a></h3><p>As there is not too much missing data, we fill them with mode. And then we do feature scaling to all of these data.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-2.2:-Perform-Dimensionality-Reduction">Step 2.2: Perform Dimensionality Reduction<a class="anchor-link" href="#Step-2.2:-Perform-Dimensionality-Reduction">&#182;</a></h3><p>On your scaled data, you are now ready to apply dimensionality reduction techniques.</p>
 <ul>
@@ -16065,7 +14635,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.decomposition</span> <span class="k">import</span> <span class="n">PCA</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16080,7 +14650,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">data_pca</span> <span class="o">=</span> <span class="n">pca</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data_scale</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16117,7 +14687,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;Explained Variance Per Principal Component&#39;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16131,7 +14701,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">scree_plot</span><span class="p">(</span><span class="n">pca</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16139,11 +14709,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16169,7 +14735,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">data_pca</span> <span class="o">=</span> <span class="n">pca_90</span><span class="o">.</span><span class="n">fit_transform</span><span class="p">(</span><span class="n">data_scale</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16182,7 +14748,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pca_90</span><span class="o">.</span><span class="n">n_components_</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16190,11 +14756,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[52]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[52]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -16207,16 +14769,20 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.2:-Perform-Dimensionality-Reduction">Discussion 2.2: Perform Dimensionality Reduction<a class="anchor-link" href="#Discussion-2.2:-Perform-Dimensionality-Reduction">&#182;</a></h3><p>We want to retain 90% information so we set number to 0.9, and we can see that it keeps 79 components.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-2.3:-Interpret-Principal-Components">Step 2.3: Interpret Principal Components<a class="anchor-link" href="#Step-2.3:-Interpret-Principal-Components">&#182;</a></h3><p>Now that we have our transformed principal components, it's a nice idea to check out the weight of each variable on the first few components to see if they can be interpreted in some fashion.</p>
 <p>As a reminder, each principal component is a unit vector that points in the direction of highest variance (after accounting for the variance captured by earlier principal components). The further a weight is from zero, the more the principal component is in the direction of the corresponding feature. If two features have large weights of the same sign (both positive or both negative), then increases in one tend expect to be associated with increases in the other. To contrast, features with different signs can be expected to show a negative correlation: increases in one variable should result in a decrease in the other.</p>
@@ -16273,7 +14839,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="k">return</span> <span class="n">variance_ratios_ith</span><span class="p">,</span> <span class="n">components_ith</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16286,7 +14852,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca_90</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16294,11 +14860,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16309,11 +14871,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[54]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[54]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -16398,7 +14956,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca_90</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16406,11 +14964,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16421,11 +14975,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[55]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[55]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -16510,7 +15060,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">pca_results</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">pca_90</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16518,11 +15068,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16533,11 +15079,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[56]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[56]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -16612,8 +15154,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-2.3:-Interpret-Principal-Components">Discussion 2.3: Interpret Principal Components<a class="anchor-link" href="#Discussion-2.3:-Interpret-Principal-Components">&#182;</a></h3><p>We can see that:</p>
 <p>the first component is mainly interpreted by household net income and financial level.</p>
@@ -16623,8 +15167,10 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h2 id="Step-3:-Clustering">Step 3: Clustering<a class="anchor-link" href="#Step-3:-Clustering">&#182;</a></h2><h3 id="Step-3.1:-Apply-Clustering-to-General-Population">Step 3.1: Apply Clustering to General Population<a class="anchor-link" href="#Step-3.1:-Apply-Clustering-to-General-Population">&#182;</a></h3><p>You've assessed and cleaned the demographics data, then scaled and transformed them. Now, it's time to see how the data clusters in the principal components space. In this substep, you will apply k-means clustering to the dataset and use the average within-cluster distances from each point to their assigned cluster's centroid to decide on a number of clusters to keep.</p>
 <ul>
@@ -16645,7 +15191,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="kn">from</span> <span class="nn">sklearn.cluster</span> <span class="k">import</span> <span class="n">KMeans</span> 
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16667,7 +15213,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="k">return</span> <span class="n">score</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16686,7 +15232,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">scores</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">score</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16702,7 +15248,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s1">&#39;SSE vs. K&#39;</span><span class="p">);</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16710,11 +15256,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -16741,21 +15283,25 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">azdias_cluster</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">data_pca</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Discussion-3.1:-Apply-Clustering-to-General-Population">Discussion 3.1: Apply Clustering to General Population<a class="anchor-link" href="#Discussion-3.1:-Apply-Clustering-to-General-Population">&#182;</a></h3><p>By using elbow method, I would like to use 23 clusters.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-3.2:-Apply-All-Steps-to-the-Customer-Data">Step 3.2: Apply All Steps to the Customer Data<a class="anchor-link" href="#Step-3.2:-Apply-All-Steps-to-the-Customer-Data">&#182;</a></h3><p>Now that you have clusters and cluster centers for the general population, it's time to see how the customer data maps on to those clusters. Take care to not confuse this for re-fitting all of the models to the customer data. Instead, you're going to use the fits from the general population to clean, transform, and cluster the customer data. In the last step of the project, you will interpret how the general population fits apply to the customer data.</p>
 <ul>
@@ -16776,7 +15322,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">customers</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s2">&quot;Udacity_CUSTOMERS_Subset.csv&quot;</span><span class="p">,</span> <span class="n">sep</span><span class="o">=</span><span class="s2">&quot;;&quot;</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16792,7 +15338,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">cust_clean</span> <span class="o">=</span> <span class="n">clean_data</span><span class="p">(</span><span class="n">customers</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16805,7 +15351,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_clean</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16813,11 +15359,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[82]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[82]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -16838,7 +15380,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_clean</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -16846,11 +15388,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[83]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[83]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -17036,7 +15574,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">cust_clean</span><span class="o">.</span><span class="n">columns</span><span class="p">))</span><span class="o">.</span><span class="n">symmetric_difference</span><span class="p">(</span><span class="nb">set</span><span class="p">(</span><span class="nb">list</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">columns</span><span class="p">)))</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17044,11 +15582,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[84]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[84]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -17069,7 +15603,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_clean</span><span class="o">.</span><span class="n">insert</span><span class="p">(</span><span class="mi">137</span><span class="p">,</span> <span class="s1">&#39;GEBAEUDETYP_5.0&#39;</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17082,7 +15616,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_clean</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17090,11 +15624,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[86]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[86]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -17115,7 +15645,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_columns</span> <span class="o">=</span> <span class="nb">list</span><span class="p">(</span><span class="n">cust_clean</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17128,7 +15658,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_clean</span> <span class="o">=</span> <span class="n">fill_nan</span><span class="o">.</span><span class="n">transform</span><span class="p">(</span><span class="n">cust_clean</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17144,7 +15674,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">cust_scale</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17152,11 +15682,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[89]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[89]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -17341,7 +15867,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">cust_scale</span><span class="o">.</span><span class="n">shape</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17349,11 +15875,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[90]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[90]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -17375,13 +15897,15 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">cust_cluster</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">cust_pca</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <h3 id="Step-3.3:-Compare-Customer-Data-to-Demographics-Data">Step 3.3: Compare Customer Data to Demographics Data<a class="anchor-link" href="#Step-3.3:-Compare-Customer-Data-to-Demographics-Data">&#182;</a></h3><p>At this point, you have clustered data based on demographics of the general population of Germany, and seen how the customer data for a mail-order sales company maps onto those demographic clusters. In this final substep, you will compare the two cluster distributions to see where the strongest customer base for the company is.</p>
 <p>Consider the proportion of persons in each cluster for the general population, and the proportions for the customers. If we think the company's customer base to be universal, then the cluster assignment proportions should be fairly similar between the two. If there are only particular segments of the population that are interested in the company's products, then we should see a mismatch from one to the other. If there is a higher proportion of persons in a cluster for the customer data compared to the general population (e.g. 5% of persons are assigned to a cluster for the general population, but 15% of the customer data is closest to that cluster's centroid) then that suggests the people in that cluster to be a target audience for the company. On the other hand, the proportion of the data in a cluster being larger in the general population than the customer data (e.g. only 2% of customers closest to a population centroid that captures 6% of the data) suggests that group of persons to be outside of the target demographics.</p>
@@ -17413,7 +15937,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">customer_prop</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">cust_cluster</span><span class="p">))[</span><span class="n">key</span><span class="p">])</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17428,7 +15952,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">customer_prop</span> <span class="o">=</span> <span class="n">customer_prop</span><span class="o">/</span> <span class="n">np</span><span class="o">.</span><span class="n">sum</span><span class="p">(</span><span class="n">customer_prop</span><span class="p">)</span><span class="o">*</span><span class="mi">100</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17441,7 +15965,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="nb">dict</span><span class="p">(</span><span class="n">Counter</span><span class="p">(</span><span class="n">azdias_cluster</span><span class="p">))))</span><span class="o">+</span><span class="mi">1</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17454,7 +15978,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">index</span><span class="p">,</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;general_prop&#39;</span><span class="p">,</span> <span class="s1">&#39;customer_prop&#39;</span><span class="p">]))</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17469,7 +15993,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">df</span><span class="p">[</span><span class="s1">&#39;difference&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">customer_prop</span> <span class="o">-</span> <span class="n">general_prop</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17483,7 +16007,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">df</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17491,11 +16015,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[97]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[97]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -17679,7 +16199,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class=" highlight hl-ipython3"><pre><span></span><span class="n">df_2</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">DataFrame</span><span class="p">(</span><span class="n">index</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">arange</span><span class="p">(</span><span class="mi">46</span><span class="p">),</span> <span class="n">columns</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">Index</span><span class="p">([</span><span class="s1">&#39;cluster&#39;</span><span class="p">,</span> <span class="s1">&#39;proportion&#39;</span><span class="p">,</span> <span class="s1">&#39;variable&#39;</span><span class="p">]))</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17699,7 +16219,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <span class="n">df_2</span><span class="p">[</span><span class="s1">&#39;variable&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">iloc</span><span class="p">[</span><span class="n">i</span><span class="o">+</span><span class="mi">23</span><span class="p">]</span> <span class="o">=</span> <span class="s1">&#39;customer_prop&#39;</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17707,11 +16227,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 <div class="output_subarea output_stream output_stderr output_text">
 <pre>/opt/conda/lib/python3.6/site-packages/pandas/core/indexing.py:189: SettingWithCopyWarning: 
 A value is trying to be set on a copy of a slice from a DataFrame
@@ -17735,7 +16251,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">df_2</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -17743,11 +16259,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[100]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[100]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -18071,7 +16583,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">sns</span><span class="o">.</span><span class="n">barplot</span><span class="p">(</span><span class="n">x</span><span class="o">=</span><span class="n">df_2</span><span class="o">.</span><span class="n">cluster</span><span class="p">,</span> <span class="n">y</span><span class="o">=</span><span class="n">df_2</span><span class="o">.</span><span class="n">proportion</span><span class="p">,</span> <span class="n">hue</span><span class="o">=</span><span class="n">df_2</span><span class="o">.</span><span class="n">variable</span><span class="p">,</span> <span class="n">palette</span><span class="o">=</span><span class="n">sns</span><span class="o">.</span><span class="n">color_palette</span><span class="p">(),</span> <span class="n">zorder</span><span class="o">=</span><span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18079,11 +16591,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[101]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[101]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18092,11 +16600,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 
 </div>
 
-<div class="output_area">
-
-    <div class="prompt"></div>
-
-
+<div class="output_area"><div class="prompt"></div>
 
 
 <div class="output_png output_subarea ">
@@ -18121,7 +16625,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;difference&quot;</span> <span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18129,11 +16633,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[102]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[102]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -18319,7 +16819,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">df</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">by</span><span class="o">=</span><span class="s2">&quot;difference&quot;</span> <span class="p">,</span> <span class="n">ascending</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18327,11 +16827,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[103]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[103]:</div>
 
 <div class="output_html rendered_html output_subarea output_execute_result">
 <div>
@@ -18518,7 +17014,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <span class="n">cust_over_general</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18526,11 +17022,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[126]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[126]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18614,7 +17106,7 @@ Length: 153, dtype: float64</pre>
 <span class="n">cust_over_general</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18622,11 +17114,7 @@ Length: 153, dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[127]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[127]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18711,7 +17199,7 @@ Length: 153, dtype: float64</pre>
 <span class="n">cust_under_general</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18719,11 +17207,7 @@ Length: 153, dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[128]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[128]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18807,7 +17291,7 @@ Length: 153, dtype: float64</pre>
 <span class="n">cust_under_general</span><span class="o">.</span><span class="n">sort_values</span><span class="p">(</span><span class="n">ascending</span> <span class="o">=</span> <span class="kc">False</span><span class="p">)</span>
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18815,11 +17299,7 @@ Length: 153, dtype: float64</pre>
 <div class="output">
 
 
-<div class="output_area">
-
-    <div class="prompt output_prompt">Out[129]:</div>
-
-
+<div class="output_area"><div class="prompt output_prompt">Out[129]:</div>
 
 
 <div class="output_text output_subarea output_execute_result">
@@ -18893,19 +17373,32 @@ Length: 153, dtype: float64</pre>
 </div>
 
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">Discussion 3.3: Compare Customer Data to Demographics Data<a class="anchor-link" href="#Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">&#182;</a></h3><p>After analyzing the clusters, we can see that people in cluster 1 and cluster 5 are overrepresented in the customer data compared to the general population. And People in cluster 6 and cluster 22 are underrepresented in the customer data compared to the general population.</p>
-<p>To sum up,</p>
-<p>People popular with the company have these characters: High salary, member of green avantgarde, High estimated household net income, green energy consumption type, multiperson household type.</p>
-<p>People unpopular with the company have these characters: Low salary, low socially-minded, low family minded, low cultural minded, high event oriented, low financial interest, not money saver and investor.</p>
+<p>We can use scaler.inverse_transform(centroid_X) to compare the clusters directly with the raw data.</p>
 
 </div>
 </div>
 </div>
-<div class="cell border-box-sizing text_cell rendered"><div class="prompt input_prompt">
-</div><div class="inner_cell">
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<h3 id="Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">Discussion 3.3: Compare Customer Data to Demographics Data<a class="anchor-link" href="#Discussion-3.3:-Compare-Customer-Data-to-Demographics-Data">&#182;</a></h3><p>After analyzing the clusters, we can see that people in cluster 1 and cluster 5 are overrepresented in the customer data compared to the general population. And People in cluster 6 and cluster 22 are underrepresented in the customer data compared to the general population.</p>
+<p>When I look at cluster 1 and 5 (these people are popular with the company), which have positive features for Social Status and Membership in environmental sustainability as part of youth, and negative features for Estimated household net income and home ownership typology. I infer that these people belong to high salary, member of green avantgarde, high estimated household net income, green energy consumption type, multiperson household type.</p>
+<p>When I look at cluster 6 and 22 (these people are unpopular with the company), which have positive features for orientation-seeking low-income earners social status, low financial interest and money-saver financial type and some specific personality type, and negative features for some specific personality type and gender. I infer that these people belong to male, low salary, low socially-minded, low family minded, low cultural minded, high event oriented, low financial interest, not money saver and investor.</p>
+
+</div>
+</div>
+</div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <blockquote><p>Congratulations on making it this far in the project! Before you finish, make sure to check through the entire notebook from top to bottom to make sure that your analysis follows a logical flow and all of your findings are documented in <strong>Discussion</strong> cells. Once you've checked over all of your work, you should export the notebook as an HTML document to submit for evaluation. You can do this from the menu, navigating to <strong>File -&gt; Download as -&gt; HTML (.html)</strong>. You will submit both that document and this notebook for your project submission.</p>
 </blockquote>
@@ -18921,7 +17414,7 @@ Length: 153, dtype: float64</pre>
 <div class=" highlight hl-ipython3"><pre><span></span> 
 </pre></div>
 
-    </div>
+</div>
 </div>
 </div>
 
@@ -18929,8 +17422,4 @@ Length: 153, dtype: float64</pre>
     </div>
   </div>
 </body>
-
- 
-
-
 </html>
